@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Multicolumn Category Widget\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Wed Apr 09 2014 08:13:50 GMT+0200\n"
-"PO-Revision-Date: Fri May 01 2015 09:19:23 GMT+0200\n"
+"PO-Revision-Date: Sun Dec 20 2015 20:25:53 GMT+0100\n"
 "Last-Translator: Arno Welzel <privat@arnowelzel.de>\n"
 "Language-Team: \n"
 "Language: Russian\n"
@@ -23,7 +23,22 @@ msgstr ""
 "X-Generator: Loco - https://localise.biz/\n"
 "X-Poedit-SearchPath-0: .."
 
-#: ../multicolumn-category-widget.php:42
+#. URI of the plugin
+msgid "http://wordpress.org/plugins/multicolumn-category-widget"
+msgstr "http://wordpress.org/plugins/multicolumn-category-widget"
+
+#. Description of the plugin
+msgid "A widget to display categories in multiple columns"
+msgstr "Виджет для отображения категорий в несколько колонок"
+
+#. Author of the plugin
+msgid "Arno Welzel <privat@arnowelzel.de>"
+msgstr "Arno Welzel <privat@arnowelzel.de>"
+
+#. Author URI of the plugin
+msgid "http://arnowelzel.de"
+msgstr "http://arnowelzel.de"
+
 msgid "Multicolumn Category Widget"
 msgstr "Multicolumn Category Widget"
 

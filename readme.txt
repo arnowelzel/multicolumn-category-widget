@@ -3,7 +3,7 @@ Contributors: awelzel
 Tags: widget, category
 Requires at least: 3.6
 Tested up to: 4.4
-Stable tag: 1.0.15
+Stable tag: 1.0.16
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -62,6 +62,9 @@ solution would be to check the template and/or other plugins, why the widget spe
 2. Example for the use in the frontend
 
 == Changelog ==
+
+= 1.0.16 =
+* Added translation for plugin information in the backend (plugin title, description etc.)
 
 = 1.0.15 =
 * Modified default frontend styles to avoid bullets in category titles in certain themes (for example Twenty Fifteen).
