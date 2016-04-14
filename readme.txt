@@ -2,8 +2,8 @@
 Contributors: awelzel
 Tags: widget, category
 Requires at least: 3.6
-Tested up to: 4.4
-Stable tag: 1.0.16
+Tested up to: 4.5
+Stable tag: 1.0.17
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -63,6 +63,9 @@ solution would be to check the template and/or other plugins, why the widget spe
 
 == Changelog ==
 
+= 1.0.17 =
+* Updated compatibility information for WordPress 4.5
+
 = 1.0.16 =
 * Added translation for plugin information in the backend (plugin title, description etc.)
 
@@ -117,6 +120,10 @@ solution would be to check the template and/or other plugins, why the widget spe
 * First release.
 
 == Upgrade Notice ==
+
+= 1.0.17 =
+This release adds no new functionality. It's just an update of the compatibility
+information for WordPress 4.5.
 
 = 1.0.8 =
 This release adds no new functionality. It's just an update of the compatibility
