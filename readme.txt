@@ -2,8 +2,8 @@
 Contributors: awelzel
 Tags: widget, category
 Requires at least: 3.6
-Tested up to: 4.5
-Stable tag: 1.0.17
+Tested up to: 4.6
+Stable tag: 1.0.18
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -62,6 +62,9 @@ solution would be to check the template and/or other plugins, why the widget spe
 2. Example for the use in the frontend
 
 == Changelog ==
+
+= 1.0.18 =
+* Updated compatibility information for WordPress 4.6
 
 = 1.0.17 =
 * Updated compatibility information for WordPress 4.5
