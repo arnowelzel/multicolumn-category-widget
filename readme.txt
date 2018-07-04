@@ -13,8 +13,7 @@ This widget displays top level categories in multiple columns.
 
 This widget displays top level categories in multiple columns.
 
-After installation, just add the widget to desired sidebar or footer and optionally enter a
-custom title and the number of columns to be displayed.
+After installation, just add the widget to desired sidebar or footer and optionally enter a custom title and the number of columns to be displayed.
 
 By default two columns are used, but you can set any number of columns you like in the backend.
 
@@ -22,39 +21,28 @@ Also see details at <http://arnowelzel.de/wp/en/projects/wordpress/multicolumn-c
 
 == Installation ==
 
-1. Extract the contents of the package to the `/wp-content/plugins/multicolumn-category-widget`
-   directory
+1. Extract the contents of the package to the `/wp-content/plugins/multicolumn-category-widget` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Frequently Asked Questions ==
 
 = How can I customize the style of the widget? =
 
-All styles can be found in `css/frontend.css`. Since these styles get overwritten when updating the widget,
-you should add the custom styles to your theme.
+All styles can be found in `css/frontend.css`. Since these styles get overwritten when updating the widget, you should add the custom styles to your theme.
 
 = Is it possible to get more translations? =
 
-Generally the widget supports multiple languages - you can use Loco Translate to add more languages,
-if needed.
+Generally the widget supports multiple languages - you can use Loco Translate to add more languages, if needed.
 
-If you want to provide a translation in your language which is missing yet, you're welcome to send me the
-po/mo files for the next update.
+If you want to provide a translation in your language which is missing yet, you're welcome to send me the po/mo files for the next update.
 
 = The categories are not displayed in multiple columns, why? =
 
 The layout uses multiple lists which are displayed next to each other using the CSS rule `display:inline-block`.
 
-This means: If there not enough room to display multiple columns (either because the sidebar of the template is
-too narrow or the available viewport of the device is very small), the browser will eventually fall back to
-show only a single column. But this is intentional to make sure that the category list is always completely
-visible - even on smaller screens or on narrow smaller sidebars - and won't break the layout of the template
-by using more room as available.
+This means: If there not enough room to display multiple columns (either because the sidebar of the template is too narrow or the available viewport of the device is very small), the browser will eventually fall back to show only a single column. But this is intentional to make sure that the category list is always completely visible - even on smaller screens or on narrow smaller sidebars - and won't break the layout of the template by using more room as available.
 
-In rare cases a template or a plugin changes the default behaviour of the WordPress core function `the_widget()`,
-which usually outputs widgets with their own CSS classes - in this case you might have to add your own styles
-based on the rules in `css/frontend.css` but without `.widget_multicolumncategorywidget`. However the better
-solution would be to check the template and/or other plugins, why the widget specific CSS classes are missing.
+In rare cases a template or a plugin changes the default behaviour of the WordPress core function `the_widget()`, which usually outputs widgets with their own CSS classes - in this case you might have to add your own styles based on the rules in `css/frontend.css` but without `.widget_multicolumncategorywidget`. However the better solution would be to check the template and/or other plugins, why the widget specific CSS classes are missing.
 
 == Screenshots ==
 
