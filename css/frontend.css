@@ -4,12 +4,12 @@
 .widget_multicolumncategorywidget ul.mccw-col-first {
 	display:inline-block;
 	vertical-align:top;
-	padding-right:2em;
+	padding-right:2em !important;
 }
 .widget_multicolumncategorywidget ul.mccw-col {
 	display:inline-block;
 	vertical-align:top;
-	padding-right:2em;
+	padding-right:2em !important;
 }
 .widget_multicolumncategorywidget ul.mccw-col-last {
 	display:inline-block;
