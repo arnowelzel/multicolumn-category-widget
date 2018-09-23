@@ -134,8 +134,11 @@ class MulticolumnCategoryWidget extends WP_Widget
      * Display an input-form in the backend
      * 
      * @param array $instance Instance values
+     * 
+     * @return void
      */
-    public function form($instance) {
+    public function form($instance)
+    {
         $title = '';
         if (isset($instance['title'])) $title = $instance['title'];
         
