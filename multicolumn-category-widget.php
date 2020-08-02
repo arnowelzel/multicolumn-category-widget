@@ -4,28 +4,12 @@ Plugin Name: Multicolumn Category Widget
 Plugin URI: http://wordpress.org/plugins/multicolumn-category-widget/
 Description: A widget to display categories in multiple columns
 Version: 1.0.19
-Date: 11 August 2018
+Date: 02 August 2020
 Author: Arno Welzel <privat@arnowelzel.de>
 Author URI: http://arnowelzel.de
 Text Domain: multicolumn-category-widget
 */
-
-/*
-Copyright (C) 2014-2018 Arno Welzel
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
+defined('ABSPATH') or die();
 
 /**
  * Multicolumn category widget
@@ -43,6 +27,10 @@ class MulticolumnCategoryWidget extends WP_Widget
             false,
             $name = __('Multicolumn Category Widget', 'multicolumn-category-widget')
         );
+
+		add_action('plugins_loaded', [$this, 'init']);
+		add_action('wp_enqueue_scripts', [$this, 'enqueueScripts']);
+		add_action('widgets_init', [$this, 'widgetsInit']);
     }
 
     /**
@@ -71,10 +59,10 @@ class MulticolumnCategoryWidget extends WP_Widget
         }
         
         // Output top level category list in multiple columns
-        $args = array(
+        $args = [
             'orderby' => 'name',
             'parent' => 0
-        );    
+        ];    
         $categories = get_categories($args);
         $categories_total = count($categories);
         $categories_per_column = ceil($categories_total / $columns);
@@ -168,45 +156,42 @@ class MulticolumnCategoryWidget extends WP_Widget
             __('Categories')
         );
     }
+
+	/**
+	 * Setup everything
+	 * 
+	 * @return void
+	 */
+	function init()
+	{
+		load_plugin_textdomain('multicolumn-category-widget', false, 'multicolumn-category-widget/languages/');
+	}
+
+	/**
+	 * Enqeue scripts
+	 *
+	 * @return void
+	 */
+	function enqueueScripts()
+	{
+		wp_register_style(
+			'multicolumn-category-widget',
+			plugins_url('css/frontend.css', __FILE__),
+			[],
+			'1.0.19'
+		);
+		wp_enqueue_style('multicolumn-category-widget');
+	}
+
+	/**
+	 * Register widget
+	 *
+	 * @return void
+	 */
+	function widgetsInit()
+	{
+		register_widget('MulticolumnCategoryWidget');
+	}
 }
 
-/**
- * Setup everything
- * 
- * @return void
- */
-function Mccw_init()
-{
-    load_plugin_textdomain('multicolumn-category-widget', false, 'multicolumn-category-widget/languages/');
-}
-
-/**
- * Enqeue scripts
- *
- * @return void
- */
-function Mccw_enqueueScripts()
-{
-    wp_register_style(
-        'multicolumn-category-widget',
-        plugins_url('css/frontend.css', __FILE__),
-        array(),
-        '1.0.19'
-    );
-    wp_enqueue_style('multicolumn-category-widget');
-}
-
-/**
- * Register widget
- *
- * @return void
- */
-function Mccw_widgetsInit()
-{
-    register_widget('MulticolumnCategoryWidget');
-}
-
-add_action('widgets_init', 'Mccw_widgetsInit');
-add_action('wp_enqueue_scripts', 'Mccw_enqueueScripts');
-add_action('plugins_loaded', 'Mccw_init');
-?>
+$mccw_widget = new MulticolumnCategoryWidget();
