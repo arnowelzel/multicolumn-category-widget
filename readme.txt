@@ -51,6 +51,10 @@ In rare cases a template or a plugin changes the default behaviour of the WordPr
 
 == Changelog ==
 
+= 1.0.19=
+* Code refactoring
+* Updated compatibility information for WordPress 5.5
+
 = 1.0.18 =
 * Updated compatibility information for WordPress 4.6
 
