@@ -2,8 +2,8 @@
 Contributors: awelzel
 Tags: widget, category
 Requires at least: 3.6
-Tested up to: 6.2
-Stable tag: 1.0.20
+Tested up to: 6.3
+Stable tag: 1.0.21
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -50,6 +50,9 @@ In rare cases a template or a plugin changes the default behaviour of the WordPr
 2. Example for the use in the frontend
 
 == Changelog ==
+
+= 1.0.21=
+* Updated compatibility information for WordPress 6.3
 
 = 1.0.20=
 * Updated compatibility information for WordPress 6.0
