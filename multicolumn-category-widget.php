@@ -178,7 +178,7 @@ class MulticolumnCategoryWidget extends WP_Widget
 			'multicolumn-category-widget',
 			plugins_url('css/frontend.css', __FILE__),
 			[],
-			'1.0.24'
+			'1.0.26'
 		);
 		wp_enqueue_style('multicolumn-category-widget');
 	}
